@@ -19,7 +19,6 @@ app.add_middleware(
 
 @app.get("/")
 def root():
-    time.sleep(2)
     return [52.505, -0.09]
 
 
