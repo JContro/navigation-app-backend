@@ -2,7 +2,7 @@
 from fastapi import APIRouter
 from src.types.coordinates import Coordinates, WaypointRoute
 from src.service.navigation.map import get_map_boundaries, get_closest_node_from_point
-
+from src.service.navigation.crow import crow_polyline
 router = APIRouter(
     prefix="/navigation"
 )
@@ -20,4 +20,5 @@ def get_map_limits():
 @router.post("/crow")
 def crow(waypoint_route_coordinates: WaypointRoute):
     print(waypoint_route_coordinates)
-    return {"succes": "is near"}
+
+    return crow_polyline(waypoint_route_coordinates)
