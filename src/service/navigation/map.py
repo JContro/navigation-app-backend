@@ -43,4 +43,8 @@ def get_closest_node_from_point(coordinates: Coordinates):
             node[key] = None
     return node
 
+import networkx as nx
 
+def shortest_path_waypoint(start, waypoint, end, graph=data, weight="weight"): 
+    first_leg = nx.shortest_path(data, source=start, target=waypoint)
+    return first_leg
