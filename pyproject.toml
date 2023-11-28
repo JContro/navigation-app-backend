@@ -14,6 +14,7 @@ geopandas = "^0.14.0"
 scikit-learn = "^1.3.2"
 matplotlib = "^3.8.0"
 imitation = "^1.0.0"
+gym = "^0.26.2"
 
 
 [tool.poetry.group.dev.dependencies]
